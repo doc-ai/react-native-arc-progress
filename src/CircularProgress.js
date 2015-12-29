@@ -5,14 +5,13 @@ import MetricsPath from 'art/metrics/path';
 
 export default class CircularProgress extends React.Component {
 
-  circlePath(cx, cy, r) {
+  circlePath(cx, cy, r, degree) {
 
     return Path()
       .moveTo(cx, cx)
-      .move(r, 0)
-      .arc(r * -2, 0, r, r)
-      .arc(r * 2, 0, r, r)
-      .close();
+      .move(-1*Math.sin(degree*\360*2*Math.PI)*r, Math.cos(degree*\360*2*Math.PI)*r)
+      .arc(2*Math.sin(degree*\360*2*Math.PI)*r, -1*Math.cos(degree*\360*2*Math.PI)*r, r, r)
+      .arc(0, 2*Math.cos(degree*\360*2*Math.PI)*r, r, r);
   }
 
   extractFill(fill) {
@@ -26,9 +25,9 @@ export default class CircularProgress extends React.Component {
   }
 
   render() {
-    const { size, width, tintColor, backgroundColor, style, rotation, children } = this.props;
+    const { size, width, tintColor, backgroundColor, style, rotation, missingDegree, children } = this.props;
 
-    const circlePath = this.circlePath(size / 2, size / 2, size / 2 - width / 2);
+    const circlePath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, missingDegree/2);
     const fill = this.extractFill(this.props.fill);
 
     return (
@@ -40,12 +39,12 @@ export default class CircularProgress extends React.Component {
             <Shape d={circlePath}
               stroke={backgroundColor}
               strokeCap="butt"
-              strokeDash={[(size - width) * Math.PI, 700]}
+              strokeDash={[(size - width) * Math.PI*(1-missingDegree/360), 700]}
               strokeWidth={width} />
             <Shape d={circlePath}
               stroke={tintColor}
               strokeCap="butt"
-              strokeDash={[(size - width) * Math.PI * fill / 100, 700]}
+              strokeDash={[(size - width) * Math.PI * fill*(1-missingDegree/360) / 100, 700]}
               strokeWidth={width} />
           </Group>
         </Surface>

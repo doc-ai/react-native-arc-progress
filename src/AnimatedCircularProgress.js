@@ -50,6 +50,7 @@ AnimatedCircularProgress.propTypes = {
   size: PropTypes.number.isRequired,
   fill: PropTypes.number.isRequired,
   prefill: PropTypes.number,
+  missingDegree: PropTypes.number,
   width: PropTypes.number.isRequired,
   tintColor: PropTypes.string,
   backgroundColor: PropTypes.string,
