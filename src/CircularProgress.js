@@ -9,9 +9,13 @@ export default class CircularProgress extends React.Component {
 
     return Path()
       .moveTo(cx, cx)
-      .move(-1*Math.sin(degree*\360*2*Math.PI)*r, Math.cos(degree*\360*2*Math.PI)*r)
-      .arc(2*Math.sin(degree*\360*2*Math.PI)*r, -1*Math.cos(degree*\360*2*Math.PI)*r, r, r)
-      .arc(0, 2*Math.cos(degree*\360*2*Math.PI)*r, r, r);
+      .move(-1*Math.sin(degree/360*2*Math.PI)*r, Math.cos(degree/360*2*Math.PI)*r)
+      .arc(2*Math.sin(degree/360*2*Math.PI)*r, -2*Math.cos(degree/360*2*Math.PI)*r, r, r)
+      .arc(0, 2*Math.cos(degree/360*2*Math.PI)*r, r, r);
+
+      // .move(-1*Math.sqrt(2)/2*r, 1*Math.sqrt(2)/2*r)
+      // .arc(Math.sqrt(2)*r, -1*Math.sqrt(2)*r, r, r)
+      // .arc(0, Math.sqrt(2)*r, r, r);
   }
 
   extractFill(fill) {
