@@ -34,6 +34,15 @@ export default class CircularProgress extends React.Component {
     const circlePath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, missingDegree/2);
     const fill = this.extractFill(this.props.fill);
 
+    var circle2 = null;
+    if (fill > 0) {
+      circle2 = <Shape d={circlePath}
+              stroke={tintColor}
+              strokeCap="butt"
+              strokeDash={[(size - width) * Math.PI * fill*(1-missingDegree/360) / 100, 700]}
+              strokeWidth={width} />;
+    }
+
     return (
       <View style={style}>
         <Surface
@@ -45,11 +54,7 @@ export default class CircularProgress extends React.Component {
               strokeCap="butt"
               strokeDash={[(size - width) * Math.PI*(1-missingDegree/360), 700]}
               strokeWidth={width} />
-            <Shape d={circlePath}
-              stroke={tintColor}
-              strokeCap="butt"
-              strokeDash={[(size - width) * Math.PI * fill*(1-missingDegree/360) / 100, 700]}
-              strokeWidth={width} />
+            {circle2}
           </Group>
         </Surface>
         {

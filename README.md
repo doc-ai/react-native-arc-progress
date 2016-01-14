@@ -2,6 +2,10 @@
 
 React Native component for creating animated, arc progress with ReactART. Useful for displaying users points for example.
 
+## ChangLog
+
+1. fix weird diplay when fill is less that 0.01;
+
 ## Example app
 ![image](screenshot.gif)
 
