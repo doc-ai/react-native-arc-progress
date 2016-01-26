@@ -7,7 +7,7 @@ React Native component for creating animated, arc progress with ReactART. Useful
 1. fix weird diplay when fill is less that 0.01;
 
 ## Example app
-![image](screenshot.gif)
+![image](http://ww3.sinaimg.cn/mw690/5a7b1062gw1f0cyub8h0cj20cy0dadij.jpg)
 
 ## Installation
 
