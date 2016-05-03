@@ -1,7 +1,7 @@
 #引言
 在iOS、Android、PC Web产品开发中，有个步骤基础且重要——切图和适配。在有钱项目开发中，我们参考了诸多流行的切图和适配方案，总结了一套自己的流程和规范。下面以网易有钱iOS的开发过程为例，介绍下我们的方法。
 #切图工具
-切图工具五花八门，比较有代表的是Photoshop+ PxCook +Cutterman 等Photoshop配合标记工具、导出工具的方式，这里略过，详细可参看[参考链接](http://www.jianshu.com/p/83af310f5939)；另外一种就是Mac上的Sketch+plugins即Sketch配合标记工具、导出工具（[参考链接](https://www.zhihu.com/question/27495264)）。下面以Sketch+Sketch Measure+Sketch Export Generator 为例。 
+切图工具五花八门，比较有代表的是Photoshop+ PxCook +Cutterman 等Photoshop配合[Photoshop配合标记工具、导出工具](http://www.jianshu.com/p/83af310f5939)的方式；另外一种就是Mac上的Sketch+plugins即Sketch配合标记工具、导出工具。下面以Sketch+Sketch Measure+Sketch Export Generator 为例。 
 #切图需求
 传统的切图工作是由视觉设计师来完成的，提供assets（切图文件夹）的同时还提供了measurement（视觉标注 ）供开发使用（[详见参考链接](http://www.ui.cn/detail/57717.html)）这种方式在我们以前也有使用，但这种方案是有弊端的：
 
@@ -263,6 +263,7 @@ const CGFloat PADDING = MKGetUniversalSizeByWidth(30/2.0f, 30/2.0f, 102/3.0f, 30
 
 ###参考
 1. https://www.designernews.co/stories/46380-sketch-vs-photoshop-for-ui--ux-design 对比才有看头！SKETCH秒杀PS CC 2015新功能的7个地方
+2. https://www.zhihu.com/question/27495264 Sketch 有哪些插件值得推荐？杀
 4. http://antinomy.me/2014_07_16_186/ 移动APP图标设计建议和技巧
 7. http://www.shejipai.cn/app-cut-plan.html  APP切图的那点事——安卓与iOS平台切图小结
 8. http://www.shejidaren.com/image-slice-for-ios-apps.html  iOS APP UI设计之从效果图到UI切图
