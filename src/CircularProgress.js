@@ -1,4 +1,5 @@
-import React, { View, PropTypes } from 'react-native';
+import React, {Component, PropTypes} from 'react';
+import  { View  } from 'react-native';
 import { Surface, Shape, Path, Group } from '../../react-native/Libraries/ART/ReactNativeART';
 import MetricsPath from 'art/metrics/path';
 
