@@ -55,4 +55,5 @@ AnimatedCircularProgress.propTypes = {
   width: PropTypes.number.isRequired,
   tintColor: PropTypes.string,
   backgroundColor: PropTypes.string,
+  strokeCap: PropTypes.string
 }
