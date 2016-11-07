@@ -81,6 +81,6 @@ CircularProgress.propTypes = {
 CircularProgress.defaultProps = {
   tintColor: 'black',
   backgroundColor: '#e4e4e4',
-  strokeCap: 'butt'
+  strokeCap: 'butt',
   rotation: 90
 }
