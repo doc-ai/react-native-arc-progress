@@ -72,7 +72,7 @@ CircularProgress.propTypes = {
   size: PropTypes.number.isRequired,
   fill: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
-  strokeCap: Proptypes.string,
+  strokeCap: PropTypes.string,
   tintColor: PropTypes.string,
   backgroundColor: PropTypes.string,
   rotation: PropTypes.number,
